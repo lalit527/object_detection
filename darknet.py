@@ -101,7 +101,7 @@ class Darknet(nn.Module):
                 layers = module["layers"]
                 layers = [int(layer) for layer in layers]
                 if layers[0] > 0:
-                    layer[0] = layer[0] - i
+                    layers[0] = layers[0] - i
                     
                 if len(layers) == 1:
                     x = outputs[i + (layers[0])]                        
